@@ -2,10 +2,10 @@
 #
 # max_temperature_reduce.py - Calculate maximum temperature from NCDC Global
 #                             Hourly Data - Reducer part
-import collections
+#import collections
 import sys
 
-res = {}
+#res = {}
 last_val = None
 cpt = 0
 #max_val = -sys.maxint
@@ -19,7 +19,8 @@ for line in sys.stdin:
   # temperature for the previous key and reinitialize the variables.
   # If not, keep calculating the maximum temperature.
   if last_val and last_val != val:
-    res[int(last_val)] = cpt
+    print "%s\t%s" % (last_val, cpt)
+    #res[last_val] = cpt
     cpt = 1
   else:
     cpt += 1
@@ -27,9 +28,11 @@ for line in sys.stdin:
 
 # we've reached the end of the file, output what is left
 if last_val:
-  res[int(last_val)] = cpt
+  #res[last_val] = cpt
+  print "%s\t%s" % (last_val, cpt)
 
+'''
 od = collections.OrderedDict(sorted(res.items()))
 
 for k, v in od.iteritems():
-  print "%s\t%s" % (k, v)
+'''
