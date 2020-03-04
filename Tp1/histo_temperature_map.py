@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-# max_temperature_map.py - Calculate maximum temperature from NCDC Global
+# histo_temperature_map.py - Calculate histogram temperature from NCDC Global
 #                          Hourly Data - Mapper part
 
 import re   # import regular expressions
