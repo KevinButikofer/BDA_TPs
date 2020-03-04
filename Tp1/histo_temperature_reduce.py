@@ -12,7 +12,7 @@ cpt = 0
 # loop through the input, line by line
 for line in sys.stdin:
   # each line contains a key and a value separated by a tab character
-  (key, val) = line.strip().split("\t")
+  val = line.strip()
   # Hadoop has sorted the input by key, so we get the values
   # for the same key immediately one after the other.
   # Test if we just got a new key, in this case output the maximum

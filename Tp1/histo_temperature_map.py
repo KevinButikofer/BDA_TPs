@@ -17,4 +17,4 @@ for line in sys.stdin:
   # temperature is valid if not +9999 and quality indicator is
   # one of 0, 1, 4, 5 or 9
   if (temp != "+9999" and re.match("[01459]", q)):
-    print "%s\t%s" % (year, int(float(temp)/10))
+    print "%s" % (int(float(temp)/10))
